@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>hacked by DarkSlayer</title>
+
+
+
+</head>
+
+<body>
+    <section class="canva" id="hero" class="pos-rel d-flex align-items-center justify-content-center text-center flex-column pb-0 pt-3 aos-init aos-animate" data-aos="fade-in" data-aos-delay="3000">
+
+        <div class="top-section" >
+            <div class="top-bg">
+            </div>
+            <canvas id="canv" ></canvas>
+            <div class="bot-bg">
+
+                <div class="wrapper">
+                    <div class="typing-welcome">
+                        Welcome,this is DarkSlayer Official page...
+                    </div>
+                </div>
+
+                <div class="cover-matrix" style="background-color: #000; width: 100%;">
+
+    </section>
+
+
+
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <h1 class="logo">DarkSlayer</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- navigation bar -->
+
+
+
+
+
+
+    <script type="text/javascript">
+        const canvas = document.getElementById('canv');
+        const ctx = canvas.getContext('2d');
+
+        const w = canvas.width = document.body.offsetWidth;
+        const h = canvas.height = document.body.offsetHeight;
+        const cols = Math.floor(w / 20) + 1;
+        const ypos = Array(cols).fill(0);
+
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, w, h);
+
+        function matrix() {
+            ctx.fillStyle = '#0001';
+            ctx.fillRect(0, 0, w, h);
+
+            ctx.fillStyle = '#0f0';
+            ctx.font = '16px courier';
+
+            ypos.forEach((y, ind) => {
+                // const text = String.fromCharCode(Math.random() * 128);
+                const text = (Math.round(Math.random())).toString();
+                const x = ind * 20;
+                ctx.fillText(text, x, y);
+                if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
+                else
+                    ypos[ind] = y + 20;
+            });
+        }
+
+        setInterval(matrix, 100);
+    </script>
+</body>
+
+</html>

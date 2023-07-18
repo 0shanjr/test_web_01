@@ -1,0 +1,99 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.logo {
+    font-family: "tpwr";
+    color: rgb(0, 255, 34);
+}
+
+@font-face {
+    font-family: "tpwr";
+    src: url("../res/tpwr.ttf");
+}
+
+.navbar {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+@font-face {
+    font-family: "tpwr";
+    src: url("tpwr.ttf");
+}
+
+.pos-rel d-flex align-items-center justify-content-center text-center flex-column pb-0 pt-3 aos-init aos-animate {
+    position: absolute;
+    height: 1080px;
+}
+
+.div {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.wrapper {
+    height: 100vh;
+    /* centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typing-welcome {
+    width: 22ch;
+    animation: typing 2s steps(43), blink .5 step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: "tpwr";
+    font-size: 2em;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.canva{
+    height: 100vh !important;
+}
